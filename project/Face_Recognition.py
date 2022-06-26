@@ -10,7 +10,7 @@ image_generator = ImageDataGenerator(rescale=1. / 255., validation_split=validat
 im_height = 112
 im_width = 92
 #图片路径
-image_path='../The ORL Database of Faces'
+image_path='data'
 #数据块大小
 batch_size=128
 # 训练集数据生成器，one-hot编码，注意，比方法1多了一个参数subset
@@ -28,4 +28,3 @@ valid_data_gen = image_generator.flow_from_directory(directory=image_path,
                                                      class_mode='categorical',
                                                      subset='validation')
 
-print(train_data_gen.n)
